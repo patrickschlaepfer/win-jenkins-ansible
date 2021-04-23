@@ -1,0 +1,12 @@
+---
+- name: Simple ping and copy
+  hosts: windows
+
+  tasks: 
+    - name: Just a simple win_ping
+      win_ping:
+
+    - name: Copy a local file to the windows host
+      win_copy:
+        src: foo.conf
+        dest: C:\Temp\renamed-foo.conf
